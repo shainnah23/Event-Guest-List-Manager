@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Event Guest List Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h1>Event Guest List Manager</h1>
-  <form id="guest-form">
-    <input type="text" id="guest-name" placeholder="Enter guest name" required>
-    <button type="submit">Add Guest</button>
-  </form>
-  <ul id="guest-list"></ul>
+  <main>
+    <h1>Event Guest List Manager</h1>
+    <form id="guest-form" autocomplete="off" aria-label="Add guest">
+      <label for="guest-name" class="visually-hidden">Guest Name</label>
+      <input type="text" id="guest-name" placeholder="Enter guest name" required autofocus>
+      <button type="submit">Add Guest</button>
+    </form>
+    <section aria-live="polite">
+      <ul id="guest-list"></ul>
+    </section>
+  </main>
   <script src="./src/index.js"></script>
 </body>
 </html>

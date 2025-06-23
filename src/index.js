@@ -30,8 +30,11 @@ function renderGuests() {
     const li = document.createElement('li');
     li.innerHTML = `
       <span>${guest.name}</span>
-      <button class="toggle">${guest.attending ? 'Attending' : 'Not Attending'}</button>
-      <button class="remove">Remove</button>
+      <small style="margin-left:8px;color:#888;">${guest.addedAt.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</small>
+      <button class="toggle" aria-pressed="${guest.attending}">
+        ${guest.attending ? 'Attending' : 'Not Attending'}
+      </button>
+      <button class="remove" aria-label="Remove ${guest.name}">Remove</button>
     `;
     li.querySelector('.remove').onclick = () => {
       guests.splice(index, 1);
