@@ -1,6 +1,7 @@
 const form = document.getElementById('guest-form');
 const guestList = document.getElementById('guest-list');
 const guestNameInput = document.getElementById('guest-name');
+const emptyMessage = document.getElementById('empty-message');
 let guests = [];
 
 form.addEventListener('submit', function(event) {
@@ -26,6 +27,12 @@ form.addEventListener('submit', function(event) {
 
 function renderGuests() {
   guestList.innerHTML = '';
+  if (guests.length === 0) {
+    emptyMessage.style.display = 'block';
+    return;
+  } else {
+    emptyMessage.style.display = 'none';
+  }
   guests.forEach((guest, index) => {
     const li = document.createElement('li');
     li.innerHTML = `
@@ -47,3 +54,5 @@ function renderGuests() {
     guestList.appendChild(li);
   });
 }
+
+// Initial render for empty state
