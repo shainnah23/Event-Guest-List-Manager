@@ -19,7 +19,7 @@ A simple web app to manage your event guest list. Add, remove, and update guests
 
 1. Clone this repo:
    ```bash
-   git clone https://github.com/your-username/Event-Guest-List-Manager.git
+   git clone https://github.com/shainnah23/Event-Guest-List-Manager.git
    cd Event-Guest-List-Manager
    ```
 2. Open `index.html` in your browser.
