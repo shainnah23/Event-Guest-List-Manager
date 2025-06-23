@@ -56,3 +56,4 @@ function renderGuests() {
 }
 
 // Initial render for empty state
+renderGuests();
